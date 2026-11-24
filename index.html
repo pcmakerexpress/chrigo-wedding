@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chrigo Wedding · Christine &amp; Igor · 07.05.2027</title>
+<meta name="description" content="Save the date — Christine & Igor · 07.05.2027 · Aracaju – SE">
+<style>
+@font-face{font-family:"Nadira";src:url(fonts/NF-Nadira-Pro-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Nadira";src:url(fonts/NF-Nadira-Pro-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Caladea";src:url(fonts/Caladea-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Caladea";src:url(fonts/Caladea-Italic.ttf) format("truetype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Caladea";src:url(fonts/Caladea-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+
+:root{
+  --azul:#0f2fb6;--azul2:#839ef9;--azul3:#c0d1ff;
+  --roxo:#73026a;--roxo2:#a535a5;--roxo3:#eaa9eb;
+  --rosa:#c00f67;--rosa2:#ea50a4;--rosa3:#ffc1e6;
+  --linho:#fdf9f6;--papel:#fffdfb;--tinta:#3b2440;--tinta2:#6d5873;
+  --serif:"Caladea",Georgia,"Times New Roman",serif;
+  --titulo:"Nadira","Caladea",Georgia,serif;
+  --tile:url(assets/tile6.webp);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+html,body{overflow-x:clip}
+body{font-family:var(--serif);color:var(--tinta);background:var(--linho);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:url(assets/textura-h.webp) center/cover;opacity:.55;pointer-events:none;z-index:-1}
+@media (orientation:portrait){body::before{background-image:url(assets/textura-v.webp)}}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--titulo);font-weight:700;color:#a66cac;line-height:1.1;letter-spacing:.005em}
+h2{font-size:clamp(34px,5.2vw,58px)}
+h3{font-size:clamp(24px,3vw,30px)}
+p{max-width:62ch}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.center{text-align:center}.center p{margin-left:auto;margin-right:auto}
+.eyebrow{font-family:var(--serif);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#e09bc1;font-weight:700}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s,box-shadow .35s}
+header.solid{background:rgba(253,249,246,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(165,53,165,.15)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;width:min(1200px,94vw);margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand span{font-family:var(--titulo);font-weight:700;color:#a66cac;font-size:20px}
+.nav ul{display:flex;gap:clamp(14px,3vw,38px);list-style:none}
+.nav a.link{text-decoration:none;font-size:15px;letter-spacing:.08em;font-weight:700;color:#a66cac;padding:6px 0;position:relative}
+.nav a.link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--rosa2);transform:scaleX(0);transition:transform .3s}
+.nav a.link:hover::after,.nav a.link.on::after{transform:scaleX(1)}
+@media (max-width:620px){.brand span{display:none}.nav a.link{font-size:13px;letter-spacing:.05em}}
+
+/* ---------- azulejo divider ---------- */
+.azulejos{height:clamp(64px,9vw,104px);background-image:url(assets/tile6.webp),url(assets/tile7.webp),url(assets/tile9.webp),url(assets/tile10.webp),url(assets/tile19.webp),url(assets/tile24.webp),url(assets/tile20.webp);background-size:auto 100%;background-repeat:no-repeat;position:relative}
+.azulejos::after{content:"";position:absolute;inset:0;box-shadow:inset 0 3px 0 var(--roxo2),inset 0 -3px 0 var(--roxo2);pointer-events:none}
+.strip{display:flex;overflow:hidden;height:clamp(64px,9vw,104px);border-top:3px solid var(--roxo2);border-bottom:3px solid var(--roxo2);background:#fff}
+.strip img{height:100%;width:auto;flex:none}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--roxo2);padding:16px 30px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 8px 24px -10px rgba(115,2,106,.6);transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{background:var(--roxo);transform:translateY(-2px);box-shadow:0 12px 28px -10px rgba(115,2,106,.7)}
+.btn.rosa{background:var(--rosa)}.btn.rosa:hover{background:#9c0b53}
+.btn.azul{background:var(--azul)}.btn.azul:hover{background:#0a2287}
+.btn.ghost{background:transparent;color:#a66cac;box-shadow:inset 0 0 0 2px #a66cac}
+.btn.ghost:hover{background:var(--roxo2);color:#fff}
+.btn svg{width:18px;height:18px}
+.btn-lg{font-size:17px;padding:20px 44px}
+@media (max-width:600px){.btn-lg{font-size:15px;padding:18px 32px}}
+
+/* ---------- views ---------- */
+.view{display:none}.view.on{display:block}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px 0 70px;position:relative;overflow:hidden;background:#f8f4ec}
+.hero::before{content:"";position:absolute;inset:0;background:url(assets/textura-h.webp) center/cover;mix-blend-mode:multiply;opacity:.7;pointer-events:none;z-index:0}
+@media (orientation:portrait){.hero::before{background-image:url(assets/textura-v.webp)}}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(transparent,rgba(248,245,238,.0));pointer-events:none}
+.hero .garland{position:absolute;top:56px;width:min(560px,90vw);left:50%;transform:translateX(-50%);opacity:.95;pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+.hero .mono{width:clamp(170px,22vw,240px);margin-bottom:8px;animation:float 7s ease-in-out infinite}
+.fita{position:relative;width:clamp(300px,46vw,520px);margin:6px 0 2px}
+.fita img{width:100%}
+.fita span{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--titulo);font-weight:700;color:#fff;font-size:clamp(20px,2.6vw,30px);padding-bottom:4%;text-shadow:0 1px 6px rgba(115,2,106,.45);letter-spacing:.02em}
+.hero h1{font-size:clamp(52px,8.5vw,104px);color:#a66cac;margin:8px 0 6px}
+.hero h1 small{display:block;font-size:.42em;color:#e09bc1;font-weight:400;letter-spacing:.06em;margin-top:.15em}
+.date-row{display:flex;align-items:center;gap:clamp(12px,3vw,28px);margin-top:10px}
+.date-row .d{font-family:var(--titulo);font-weight:700;font-size:clamp(30px,4.6vw,52px);color:#93a1dc;letter-spacing:.06em}
+.date-row .d.r{color:#e09bc1}
+.date-row img{width:clamp(80px,10vw,120px);opacity:.85}
+.place{margin-top:clamp(18px,2.4vw,30px);font-size:clamp(16px,1.8vw,20px);letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#a66cac}
+.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#a66cac;text-decoration:none;z-index:3}
+.scroll i{width:2px;height:34px;background:linear-gradient(#a66cac,transparent);animation:drip 2s ease-in-out infinite}
+.gar{position:absolute;pointer-events:none;z-index:1;width:clamp(240px,30vw,470px)}
+.gar.tl{top:64px;left:0}
+.gar.tr{top:64px;right:0;transform:scaleX(-1)}
+.gar.bl{bottom:0;left:0}
+.gar.br{bottom:0;right:0;transform:scaleX(-1)}
+@media (max-width:760px){.gar{width:min(72%,340px)}.gar.tl{top:62px;left:0;right:0;width:100%;height:min(30.1vw,142px);object-fit:cover;object-position:center;transform:none}.gar.tr,.gar.br{display:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- section ---------- */
+section.s{padding:clamp(70px,10vw,130px) 0}
+.s-head{text-align:center;margin-bottom:clamp(30px,5vw,56px)}
+.s-head h2{margin-top:10px}
+.s-head p{margin:18px auto 0;color:var(--tinta2)}
+.lead{font-size:clamp(18px,1.9vw,21px)}
+
+/* ---------- countdown + playlist ---------- */
+.folia{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:stretch}
+@media (max-width:860px){.folia{grid-template-columns:1fr}}
+.card{background:var(--papel);border-radius:28px;padding:clamp(28px,4vw,48px);position:relative;box-shadow:0 30px 60px -40px rgba(115,2,106,.45),0 0 0 1px rgba(165,53,165,.12)}
+.countdown-card{text-align:center;overflow:hidden}
+.countdown-card .sun{position:absolute;left:50%;bottom:-42%;width:110%;transform:translateX(-50%);opacity:.25;pointer-events:none;-webkit-mask-image:radial-gradient(circle at 50% 100%,#000 40%,transparent 72%);mask-image:radial-gradient(circle at 50% 100%,#000 40%,transparent 72%)}
+.countdown-card h2{font-size:clamp(30px,3.8vw,44px)}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.4vw,16px);margin:28px 0 24px;position:relative}
+.cd div{background:#fff;border-radius:18px;padding:16px 4px 12px;box-shadow:0 0 0 2px var(--roxo3)}
+.cd b{display:block;font-family:var(--titulo);font-weight:700;font-size:clamp(34px,4.4vw,56px);color:#93a1dc;line-height:1;font-variant-numeric:tabular-nums}
+.cd div:nth-child(2) b{color:#a66cac}.cd div:nth-child(3) b{color:#e09bc1}.cd div:nth-child(4) b{color:#93a1dc}
+.cd span{display:block;margin-top:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--tinta2)}
+.countdown-card p{position:relative;margin:0 auto}
+.playlist{display:flex;flex-direction:column;align-items:flex-start;gap:18px;background:linear-gradient(160deg,#fff 0%,#fff6fb 100%)}
+.playlist h2{font-size:clamp(30px,3.8vw,44px)}
+.vinyl{width:clamp(150px,16vw,190px);aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#2a0e2b 0 2px,#3a1840 2px 4px);position:relative;box-shadow:0 18px 30px -16px rgba(0,0,0,.55);animation:spin 6s linear infinite;align-self:center;margin-bottom:6px}
+.vinyl::before{content:"";position:absolute;inset:31%;border-radius:50%;background:url(assets/tile20.webp) center/cover;box-shadow:0 0 0 3px var(--rosa3)}
+.vinyl::after{content:"";position:absolute;inset:48%;border-radius:50%;background:var(--linho)}
+.vinyl.paused{animation-play-state:paused}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vinyl-wrap{align-self:stretch;display:flex;justify-content:center;position:relative}
+.vinyl-wrap img{position:absolute;right:4%;top:-8px;width:90px;transform:rotate(18deg)}
+
+/* ---------- história ---------- */
+.historia{background:linear-gradient(180deg,transparent,rgba(255,193,230,.18) 30%,rgba(192,209,255,.18) 80%,transparent)}
+.gallery{position:relative}
+.track{display:flex;gap:clamp(14px,2vw,26px);overflow-x:auto;scroll-snap-type:x mandatory;padding:50px 4vw 80px;margin:-38px 0 -54px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.ph{flex:none;width:clamp(230px,26vw,320px);aspect-ratio:4/5;scroll-snap-align:center;border-radius:6px;background:#fff;padding:12px 12px 48px;box-shadow:0 18px 38px -24px rgba(59,36,64,.55);position:relative;transition:transform .35s}
+.ph:nth-child(odd){transform:rotate(-2.2deg)}.ph:nth-child(even){transform:rotate(1.8deg) translateY(10px)}
+.ph:hover{transform:rotate(0) scale(1.02)}
+.ph .img{width:100%;height:100%;border-radius:3px;overflow:hidden;position:relative;background:var(--rosa3)}
+.ph .img img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.ph .img.empty{display:grid;place-items:center;background:var(--bg,#ffe3f2)}
+.ph .img.empty::before{content:"";position:absolute;inset:0;background:var(--t) center/120px;opacity:.28}
+.ph .img.empty em{position:relative;font-family:var(--titulo);font-style:normal;font-weight:700;color:#a66cac;font-size:22px;background:rgba(255,255,255,.85);padding:6px 16px;border-radius:999px}
+.ph figcaption{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-style:italic;color:var(--tinta2);font-size:16px}
+.gbtn{position:absolute;top:44%;width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:#a66cac;box-shadow:0 8px 20px -10px rgba(0,0,0,.4);cursor:pointer;display:grid;place-items:center;z-index:2}
+.gbtn.p{left:max(8px,2vw)}.gbtn.n{right:max(8px,2vw)}
+.gbtn svg{width:20px;height:20px}
+.story{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(30px,6vw,80px);align-items:center;margin-top:clamp(40px,6vw,70px)}
+@media (max-width:860px){.story{grid-template-columns:1fr}.story .art{max-width:330px}.story .art .birds{right:-6%}}
+.story .art{position:relative;max-width:360px;margin:0 auto}
+.story .art .tileimg{border-radius:20px;box-shadow:0 30px 50px -30px rgba(15,47,182,.5);transform:rotate(-3deg)}
+.story .art .birds{position:absolute;right:-14%;bottom:-12%;width:56%;animation:float 6s ease-in-out infinite}
+.story p+p{margin-top:1em}
+.story p:first-of-type::first-letter{font-family:var(--titulo);font-weight:700;font-size:1.6em;line-height:1;color:#e09bc1}
+.story .fecho{font-style:italic;color:#a66cac}
+
+/* ---------- grande dia ---------- */
+.dia{position:relative}
+.dia-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,5vw,64px);align-items:center}
+@media (max-width:900px){.dia-grid{grid-template-columns:1fr}}
+.colina{position:relative}
+.colina img{width:100%;filter:saturate(1.05)}
+.colina .santo{position:absolute;width:26%;left:-4%;bottom:-6%;border-radius:14px;box-shadow:0 18px 30px -16px rgba(15,47,182,.5);transform:rotate(-6deg)}
+.bigdate{font-family:var(--titulo);font-weight:700;color:#93a1dc;font-size:clamp(34px,4.6vw,52px);line-height:1.05}
+.weekday{margin-top:22px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;font-size:15px;color:#e09bc1}
+.evts{display:grid;gap:16px;margin:28px 0}
+.evt{display:flex;gap:16px;align-items:flex-start;background:var(--papel);border-radius:20px;padding:18px 22px;box-shadow:0 0 0 1px rgba(165,53,165,.15)}
+.evt{text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.evt:hover{transform:translateY(-2px);box-shadow:0 0 0 2px #a66cac,0 14px 30px -18px rgba(115,2,106,.5)}
+.evt .go{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:14px;font-weight:700;letter-spacing:.04em;color:#a66cac}
+.evt .go svg{width:15px;height:15px}
+.evt .ic{flex:none;width:52px;height:52px;border-radius:14px;background:var(--t) center/cover;box-shadow:0 0 0 2px #fff,0 0 0 3px var(--roxo3)}
+.evt h3{font-size:24px;color:#a66cac}
+.evt p{color:var(--tinta2);margin-top:2px}
+.addr{display:flex;gap:8px;align-items:flex-start;color:var(--tinta2);margin-top:8px;font-size:16px;line-height:1.45}
+.addr svg{flex:none;width:18px;height:18px;color:#e09bc1;margin-top:3px}
+
+/* ---------- CTA blocks ---------- */
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px)}
+@media (max-width:860px){.ctas{grid-template-columns:1fr}}
+.cta{border-radius:30px;overflow:hidden;background:var(--papel);display:flex;flex-direction:column;box-shadow:0 30px 60px -40px rgba(115,2,106,.5),0 0 0 1px rgba(165,53,165,.12)}
+.cta .top{height:200px;background:var(--t) center/220px repeat;position:relative;display:grid;place-items:center}
+.cta .top img{width:150px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.18))}
+.cta .top img.gift-ic{width:96px}
+.cta .top img.carta-ic{width:124px}
+.cta .top .badge{width:170px;height:170px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -12px rgba(0,0,0,.35)}
+.cta .body{padding:clamp(26px,3.6vw,42px);display:flex;flex-direction:column;gap:16px;flex:1}
+.cta .body .btn{align-self:flex-start;margin-top:auto}
+.cta h2{font-size:clamp(30px,3.6vw,42px)}
+
+/* ---------- fechamento / footer ---------- */
+.fecho-sec{text-align:center;padding:clamp(70px,10vw,120px) 0 0;position:relative;overflow:hidden}
+.fecho-sec .ass{width:min(380px,74vw);margin:0 auto}
+.fecho-sec h2{margin-top:6px}
+.fecho-sec .d{font-family:var(--titulo);font-weight:700;color:#93a1dc;font-size:26px;letter-spacing:.1em;margin-top:6px}
+.sun-rise{width:min(340px,64vw);margin:40px auto 0;transform:translateY(7%);aspect-ratio:1100/734;background:url(assets/sol.webp) center bottom/contain no-repeat}
+footer{background:var(--roxo);color:#f6dcf5;text-align:center;padding:34px 20px 40px;font-size:15px;letter-spacing:.06em}
+footer b{font-family:var(--titulo);font-weight:700;font-size:22px;color:#fff;display:block;margin-bottom:4px;letter-spacing:.02em}
+footer nav{display:flex;gap:22px;justify-content:center;margin-top:14px;font-size:14px;font-weight:700;letter-spacing:.08em}
+footer nav a{text-decoration:none;color:#f6dcf5}
+footer nav a:hover{color:#fff}
+
+/* ---------- inner pages ---------- */
+.page-hero{padding:130px 0 50px;text-align:center;position:relative}
+.page-hero img.ic{width:clamp(120px,14vw,170px);margin:0 auto 10px}
+.page-hero img.ic-presente{width:clamp(96px,10vw,130px)}
+.page-hero h1{font-size:clamp(44px,6vw,72px)}
+.page-hero p{margin:18px auto 0;color:var(--tinta2)}
+.formcard{max-width:720px;margin:0 auto}
+.field{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.field label,.field .lbl{font-weight:700;color:#a66cac;font-size:16px;letter-spacing:.04em}
+.field input,.field textarea,.field select{font:inherit;font-size:17px;color:var(--tinta);padding:14px 16px;border-radius:14px;border:1.5px solid #e6d2e8;background:#fff;outline:none;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--roxo2);box-shadow:0 0 0 4px rgba(165,53,165,.12)}
+.field textarea{min-height:110px;resize:vertical}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.choices{grid-template-columns:1fr}}
+.choice{position:relative}
+.choice input{position:absolute;opacity:0}
+.choice span{display:flex;align-items:center;gap:10px;padding:16px 18px;border-radius:14px;border:1.5px solid #e6d2e8;background:#fff;cursor:pointer;transition:all .2s}
+.choice span::before{content:"";width:18px;height:18px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--roxo3);flex:none;transition:all .2s}
+.choice input:checked+span{border-color:var(--roxo2);background:#fdf2fd}
+.choice input:checked+span::before{box-shadow:inset 0 0 0 5px var(--roxo2)}
+.choice input:focus-visible+span{box-shadow:0 0 0 4px rgba(165,53,165,.2)}
+.hint{font-size:14px;color:var(--tinta2)}
+.one-line{max-width:none!important;text-wrap:balance}
+@media (min-width:640px){.one-line{white-space:nowrap}}
+.field [aria-invalid]{border-color:var(--rosa)!important;box-shadow:0 0 0 4px rgba(192,15,103,.1)!important}
+.err{color:var(--rosa);font-size:15px;margin-top:-10px;margin-bottom:16px;display:none}
+.ok{display:none;text-align:center}
+.ok img{width:180px;margin:0 auto 10px}
+.ok h2{font-size:clamp(34px,4.6vw,48px)}
+.ok p{margin:14px auto 0}
+.ok .btn{margin-top:26px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:560px){.row2{grid-template-columns:1fr}}
+
+.filtros{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:clamp(26px,4vw,40px)}
+.chip{font:inherit;font-weight:700;font-size:15px;letter-spacing:.04em;color:#a66cac;background:#fff;border:0;border-radius:999px;padding:10px 20px;cursor:pointer;box-shadow:inset 0 0 0 1.5px #e6d2e8;transition:all .2s}
+.chip:hover{box-shadow:inset 0 0 0 1.5px #a66cac}
+.chip.on{background:#a66cac;color:#fff;box-shadow:none}
+.gift[hidden]{display:none}
+.gifts{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:clamp(18px,2.4vw,28px)}
+.gift{background:var(--papel);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 50px -36px rgba(115,2,106,.55),0 0 0 1px rgba(165,53,165,.12);transition:transform .25s}
+.gift:hover{transform:translateY(-4px)}
+.gift .pic{aspect-ratio:4/3;background:var(--t) center/cover}
+.gift .gb{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.gift h3{font-size:23px}
+.gift p{font-size:16px;color:var(--tinta2)}
+.gift .price{font-family:var(--titulo);font-weight:700;font-size:28px;color:#93a1dc;margin-top:auto;padding-top:10px}
+.gift .btn{margin-top:10px;justify-content:center;padding:13px 20px;font-size:13px}
+
+.modal{position:fixed;inset:0;background:rgba(59,36,64,.55);display:none;place-items:center;z-index:100;padding:20px;backdrop-filter:blur(4px)}
+.modal.on{display:grid}
+.modal .box{background:var(--papel);border-radius:26px;max-width:460px;width:100%;padding:34px 30px 30px;text-align:center;position:relative;box-shadow:0 40px 80px -30px rgba(0,0,0,.5);max-height:90vh;overflow:auto}
+.modal .x{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:0;background:#f5e8f5;color:#a66cac;cursor:pointer;font-size:22px;line-height:1}
+.modal .mpic{width:110px;height:110px;border-radius:20px;margin:0 auto 14px;background:var(--t) center/cover}
+.modal h3{font-size:28px}
+.modal .mprice{font-family:var(--titulo);font-weight:700;color:#93a1dc;font-size:30px;margin:6px 0 14px}
+.pix{background:#fff;border:1.5px dashed var(--roxo3);border-radius:16px;padding:14px 16px;margin:14px 0}
+.pix small{display:block;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta2);font-size:12px;margin-bottom:4px}
+.pix b{display:block;color:#a66cac;font-size:18px;overflow-wrap:anywhere}
+.pix .fav-l{margin-top:12px}
+#m-fav{display:block;font-size:15px;font-weight:700;color:var(--tinta);letter-spacing:.02em;text-wrap:balance;line-height:1.4}
+.modal .btn{width:100%;justify-content:center;margin-top:8px}
+.copied{color:#e09bc1;font-size:14px;min-height:20px;margin-top:6px}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+
+/* ---------- quebras de linha ---------- */
+h1,h2,h3,.bigdate,.weekday,.eyebrow,figcaption{text-wrap:balance}
+p,.addr span,.gift p,label{text-wrap:pretty}
+/* ---------- mobile ---------- */
+@media (max-width:600px){
+  body{font-size:17px}
+  .wrap{width:calc(100% - 48px)}
+  .nav{width:calc(100% - 40px);height:64px}
+  .nav ul{gap:14px}
+  .hero{padding:calc(16px + min(30.1vw,142px)) 24px 70px;align-items:start}
+  .hero h1{font-size:46px;margin-bottom:0}
+  .hero .date-row{margin-top:-6px}
+  .hero .mono{width:140px}
+  .date-row .d{font-size:26px}
+  .date-row img{width:68px}
+  .place{font-size:15px;margin-top:12px}
+  section.s{padding:64px 0}
+  .s-head{padding:0 24px}
+  .card{padding:30px 22px;border-radius:24px}
+  .cd{gap:6px;margin:22px 0 20px}
+  .cd div{padding:12px 2px 10px;border-radius:14px}
+  .cd b{font-size:30px}
+  .cd span{font-size:10px;letter-spacing:.04em}
+  .countdown-card h2,.playlist h2{font-size:30px}
+  .track{padding:50px 24px 80px}
+  .gbtn{width:40px;height:40px}
+  .story{gap:48px}
+  .story .art{max-width:270px}
+  .story .art .birds{right:-6%;bottom:-8%;width:42%}
+  .colina .santo{left:3%;bottom:-4%;width:24%}
+  .dia-grid{gap:44px}
+  .evt{padding:16px 18px}
+  .btn{padding:14px 22px;font-size:13px}
+  .cta .top{height:170px}
+  .cta .top .badge{width:140px;height:140px}
+  .cta .top img{width:120px}
+  .cta .top img.gift-ic{width:78px}
+  .cta .top img.carta-ic{width:100px}
+  .cta .body{padding:26px 22px 28px}
+  .page-hero{padding:104px 24px 36px}
+  .page-hero h1{font-size:40px}
+  .filtros{gap:8px}
+  .chip{font-size:14px;padding:9px 16px}
+  .gifts{gap:20px}
+  .fecho-sec{padding:64px 24px 0}
+  .fecho-sec .ass{width:min(230px,60vw)}
+  footer{padding:30px 24px 36px}
+  footer nav{gap:16px;flex-wrap:wrap}
+  .modal .box{padding:30px 22px 24px}
+  .row2{gap:0}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="nav">
+    <a class="brand" href="#inicio" aria-label="Início"><img src="assets/ci.webp" alt="Monograma CI"><span>Chrigo Wedding</span></a>
+    <ul>
+      <li><a class="link" data-v="inicio" href="#inicio">INÍCIO</a></li>
+      <li><a class="link" data-v="presenca" href="#presenca">PRESENÇA</a></li>
+      <li><a class="link" data-v="presentes" href="#presentes">PRESENTES</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= INÍCIO ================= -->
+<main class="view" id="v-inicio">
+
+  <section class="hero">
+    <picture><source media="(max-width:760px)" srcset="assets/guirlanda-topo-mobile.webp"><img class="gar tl" src="assets/guirlanda-topo.webp" alt=""></picture>
+    <img class="gar tr" src="assets/guirlanda-topo.webp" alt="">
+    <div class="hero-inner">
+      <img class="mono" src="assets/monograma.webp" alt="Monograma Christine e Igor">
+      <h1>Chrigo Wedding</h1>
+      <div class="date-row">
+        <span class="d">07.05</span>
+        <img src="assets/passaros.webp" alt="Andorinhas">
+        <span class="d r">2027</span>
+      </div>
+      <div class="place">Aracaju – SE</div>
+    </div>
+    <a class="scroll" href="#contagem" onclick="return go('contagem')">role <i></i></a>
+  </section>
+
+  <div class="strip" aria-hidden="true"></div>
+
+  <section class="s" id="contagem">
+    <div class="wrap folia">
+      <div class="card countdown-card reveal">
+        <img class="sun" src="assets/tile23.webp" alt="">
+        <span class="eyebrow">Contagem regressiva</span>
+        <h2>Falta pouco para o nosso grande dia!</h2>
+        <div class="cd" id="cd">
+          <div><b id="cd-d">000</b><span>Dias</span></div>
+          <div><b id="cd-h">00</b><span>Horas</span></div>
+          <div><b id="cd-m">00</b><span>Minutos</span></div>
+          <div><b id="cd-s">00</b><span>Segundos</span></div>
+        </div>
+        <p>Estamos contando os dias para viver esse momento tão especial e queremos celebrar cada segundo ao lado de vocês.</p>
+      </div>
+      <div class="card playlist reveal">
+        <div class="vinyl-wrap"><div class="vinyl" id="vinyl"></div><img src="assets/passaros.webp" alt=""></div>
+        <h2>Nossa playlist para entrar no clima 🎶</h2>
+        <p>Um pouquinho da nossa história em forma de música.</p>
+        <a class="btn rosa" id="spotify" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5A10.5 10.5 0 1 0 22.5 12 10.5 10.5 0 0 0 12 1.5Zm4.8 15.1a.65.65 0 0 1-.9.22c-2.46-1.5-5.55-1.84-9.2-1a.66.66 0 0 1-.3-1.28c3.98-.91 7.4-.52 10.18 1.17a.65.65 0 0 1 .22.89Zm1.28-2.86a.82.82 0 0 1-1.13.27c-2.81-1.73-7.1-2.23-10.43-1.22a.82.82 0 1 1-.48-1.57c3.8-1.15 8.52-.6 11.77 1.4a.82.82 0 0 1 .27 1.12Zm.11-2.97C14.82 8.76 9.26 8.57 6.04 9.55a.98.98 0 1 1-.57-1.88c3.7-1.12 9.84-.9 13.72 1.4a.98.98 0 0 1-1 1.69Z"/></svg>
+          Ouça nossa playlist
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="s historia" id="historia">
+    <div class="s-head reveal">
+      <span class="eyebrow">Christine & Igor</span>
+      <h2>Nossa história</h2>
+    </div>
+    <div class="gallery reveal">
+      <button class="gbtn p" aria-label="Fotos anteriores" onclick="slide(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="track" id="track"></div>
+      <button class="gbtn n" aria-label="Próximas fotos" onclick="slide(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="wrap story">
+      <div class="art reveal">
+        <img class="tileimg" src="assets/fotos/historia.webp" alt="Christine e Igor de mãos dadas na escada">
+        <img class="birds" src="assets/passaros.webp" alt="">
+      </div>
+      <div class="reveal lead">
+        <p>Em meio a uma pandemia, em 2021, flertar pela internet se tornou comum. Foi assim que nos conhecemos! Vieram as conversas que atravessavam horas, as ligações que pareciam não ter fim e, finalmente, o primeiro beijo, daqueles "nas escondidas".</p>
+        <p>Dois meses depois de nos conhecermos, começamos a namorar e, desde então, nunca mais desgrudamos.</p>
+        <p>O que começou com uma conexão pela internet se transformou em parceria, cumplicidade, planos, sonhos e uma vontade cada vez maior de dividir a vida.</p>
+        <p class="fecho">Esse foi só o começo de uma vida inteira juntos. E agora queremos celebrar o próximo capítulo ao lado de vocês!</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true"></div>
+
+  <section class="s dia" id="grande-dia">
+    <div class="wrap dia-grid">
+      <div class="colina reveal">
+        <img src="assets/colina.webp" alt="Ilustração em aquarela da Colina de Santo Antônio, Aracaju">
+        <img class="santo" src="assets/tile11.webp" alt="Azulejo de Santo Antônio">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Cerimônia &amp; recepção</span>
+        <h2 style="margin:10px 0 2px">O grande dia</h2>
+        <div class="bigdate">07 de maio de 2027</div>
+        <div class="weekday">Sexta-feira • Aracaju – Sergipe</div>
+        <div class="evts">
+          <a class="evt" id="mapa" href="#" target="_blank" rel="noopener" aria-label="Abrir local da cerimônia no Google Maps"><div><h3>Cerimônia</h3><p>Colina de Santo Antônio</p><div class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Praça Siqueira de Menezes, 117, Aracaju – SE, <span style="white-space:nowrap">49060-650</span></span></div><span class="go">Abrir no Google Maps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></a>
+          <a class="evt" id="mapa-recepcao" href="#" target="_blank" rel="noopener" aria-label="Abrir local da recepção no Google Maps"><div><h3>Recepção</h3><p>Salão de Festas da Colina</p><div class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>R. Cláudio Batista, 125, Aracaju – SE, <span style="white-space:nowrap">49060-100</span></span></div><span class="go">Abrir no Google Maps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true"></div>
+
+  <section class="s">
+    <div class="wrap ctas">
+      <article class="cta reveal">
+        <div class="top" style="--t:url(assets/tile-coracao.webp)"><div class="badge"><img class="carta-ic" src="assets/carta.webp" alt=""></div></div>
+        <div class="body">
+          <span class="eyebrow">Presença</span>
+          <h2>Você faz a diferença!</h2>
+          <p>A nossa felicidade fica ainda maior quando compartilhada com quem amamos. Queremos muito ter você pertinho da gente nesse dia tão especial!</p>
+          <p>Para nos ajudar com a organização, confirme sua presença pelo botão abaixo.</p>
+          <a class="btn" href="#presenca">Confirme sua presença</a>
+        </div>
+      </article>
+      <article class="cta reveal">
+        <div class="top" style="--t:url(assets/tile-presente-v2.webp)"><div class="badge"><img class="gift-ic" src="assets/presente-v2.webp" alt=""></div></div>
+        <div class="body">
+          <span class="eyebrow">Presentes</span>
+          <h2>Nos presenteie com carinho!</h2>
+          <p>O maior presente é ter você com a gente nesse momento tão importante. Mas, se quiser nos presentear, preparamos algumas opções com muito carinho para fazer parte dessa nova etapa da nossa vida.</p>
+          <a class="btn rosa" href="#presentes">Opções de presentes</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- ================= PRESENÇA ================= -->
+<main class="view" id="v-presenca">
+  <section class="page-hero">
+    <img class="ic ic-carta" src="assets/carta.webp" alt="">
+    <span class="eyebrow">Presença</span>
+    <h1>Sem você não tem graça!</h1>
+    <p class="lead">A nossa felicidade fica ainda maior quando compartilhada com quem amamos. Queremos muito ter você pertinho da gente nesse dia tão especial!</p>
+  </section>
+  <section style="padding:0 0 clamp(70px,10vw,120px)">
+    <div class="wrap center">
+      <a class="btn btn-lg" href="https://app.eiconfirme.com/conferir-presenca/casamento/igor-carvalho" target="_blank" rel="noopener">Confirmar presença</a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= PRESENTES ================= -->
+<main class="view" id="v-presentes">
+  <section class="page-hero">
+    <img class="ic ic-presente" src="assets/presente-v2.webp" alt="">
+    <span class="eyebrow">Presentes</span>
+    <h1>Nos presenteie com carinho!</h1>
+    <p class="lead">O maior presente é ter você com a gente nesse momento tão importante. Mas, se quiser nos presentear, preparamos algumas opções com muito carinho para fazer parte dessa nova etapa da nossa vida.</p>
+  </section>
+  <section style="padding:0 0 clamp(70px,10vw,120px)">
+    <div class="wrap filtros" id="filtros" role="tablist" aria-label="Filtrar presentes">
+      <button class="chip on" data-f="todos">Todos</button>
+      <button class="chip" data-f="dois">Para os dois</button>
+      <button class="chip" data-f="guigo">Para Guigo</button>
+      <button class="chip" data-f="chris">Para Chris</button>
+      <button class="chip" data-f="lua">Lua de mel</button>
+      <button class="chip" data-f="casa">Casa nova</button>
+    </div>
+    <div class="wrap gifts" id="gifts"></div>
+  </section>
+</main>
+
+<!-- ================= FECHAMENTO (todas as páginas) ================= -->
+<div class="strip" aria-hidden="true"></div>
+<section class="fecho-sec">
+  <img class="ass" src="assets/assinatura.webp" alt="Christine e Igor">
+  <h2>A gente se vê lá!</h2>
+  <div class="d">07.05.2027</div>
+  <div class="sun-rise" aria-hidden="true"></div>
+</section>
+<footer>
+  <b>Chrigo Wedding</b>
+  Christine & Igor · Aracaju – SE
+  <nav><a href="#inicio">INÍCIO</a><a href="#presenca">PRESENÇA</a><a href="#presentes">PRESENTES</a></nav>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-t">
+  <div class="box">
+    <button class="x" aria-label="Fechar" onclick="closeM()">×</button>
+    <div class="mpic" id="m-pic"></div>
+    <h3 id="m-t"></h3>
+    <div class="mprice" id="m-v"></div>
+    <p class="hint">Faça um PIX com o valor do presente para a chave abaixo. Depois, se quiser, mande um recadinho pra gente!</p>
+    <div class="pix"><small>Chave PIX</small><b id="m-pix"></b><small class="fav-l">Favorecido</small><span id="m-fav"></span></div>
+    <button class="btn" onclick="copyPix()">Copiar chave PIX</button>
+    <div class="copied" id="copied"></div>
+    <a class="btn ghost" id="m-wa" href="#" target="_blank" rel="noopener">Avisar os noivos</a>
+  </div>
+</div>
+
+<script>
+/* =============================================================
+   CONFIGURAÇÕES — edite aqui
+   ============================================================= */
+const CONFIG = {
+  dataCasamento: "2027-05-07T00:00:00-03:00",   // alvo da contagem regressiva
+  spotify: "https://open.spotify.com/playlist/7sFnHp5SGcN9d0oXP359us",          // link da playlist
+  mapa: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Praça Siqueira de Menezes, 117, Aracaju - SE, 49060-650"),
+  mapaRecepcao: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("R. Cláudio Batista, 125, Aracaju - SE, 49060-100"),
+  whatsapp: "5579998082779",                     // número que recebe confirmações (DDI+DDD+número)
+  pix: "comchrigo@gmail.com",                  // chave PIX
+  favorecido: "IGOR CARVALHO BARRETO PEREIRA",
+  // Fotos da galeria: troque "src" pelo caminho da foto (ex.: "fotos/01.jpg"). Sem src, aparece um quadro ilustrado.
+  fotos: [
+    {src:"assets/fotos/2021-v3.webp", lq:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDCkWNoXkblUUtx1rLEsp+Tg78dP5e9WBHMit5rNDGVOeeT7VUVXCrIjqzh/lQe3c1lzJs0UWiZp5FY9DhuARmo7WVmuJM49elFFCRbP//Z", legenda:"2021 · o começo", t:"tile19", bg:"#ffe3f2"},
+    {src:"assets/fotos/primeiro-encontro-v3.webp", lq:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDG02ATWsk1wXU9EKsAzMO5yD6+3SmWgd7eRHDJJgSKpXk98jPaukvvDEttYO8N+/msC0m07V4GBgelYya0t3aWtld27eYHGJEbnOMcd8n06Vyzg2vM6o2eqZ0Fq7XbzCc7hvJx257VheHLOGbXbu3lBeOGEuobnnPeiiuak/fkadj/2Q==", legenda:"primeiro encontro", t:"tile6", bg:"#e6ecff"},
+    {src:"assets/fotos/viagens-v3.webp", lq:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDQ1KGCFlM8iRbzhSxxmqiRW3lCYTo6HpsOc1Gp+3wSyG5a6ldmJHKr8vYZ6DJI/A1k6bqMVw7fbrpbaOEk7dvzvzwMj9f/AK9dcq8krpaHMqN+updV2bVBariOKXfHhBjaoUkY/IVmQWkct/pMrsxaW4CMOMEAZ6Y/CiiuNfCv66HVL4j/2Q==", legenda:"nossas viagens", t:"tile24", bg:"#f7e4f7"},
+    {src:"assets/fotos/dia-a-dia-v3.webp", lq:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCnpsiR2XMvHlmQhgT07fjVhmuEjSWaNAhJ4jO7Ptz0x+tZscc1vMCkirDGjB8nsRyP8+lZml3moXVwF3TTQRqNwXHyrmslK6ubSpuK13ZXW5nkWaF5GKHOR6561d8JkiWZgecAfzNFFFZfu2VFt1Fc/9k=", legenda:"dia a dia", t:"tile9", bg:"#ffe3f2"},
+    {src:"assets/fotos/pedido-v3.webp", lq:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwA1DRL542mufLljVgwaLnaFOcY6896vQRSSojOjJtUKQQR0qvHrAcxRGZpZM7VH3ST1/l3qGLUNVubmSKJ3AXhl34WIdsnufauDVs77JIw/DbmaS2aTlkm2A+2016BYWNvYWoaFdz8tvfkknqf1oorey5jC75T/2Q==", legenda:"o pedido", t:"tile10", bg:"#e6ecff"},
+    {src:"assets/fotos/altar-v3.webp", lq:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDdvtSi0yFZlVyu7DRBSMjHUA9P5Vfh1C1lJUEoQhdtwxgD36Gue1GRri2bcyvEPmwgyR6n3HtWVrF3IsUMQQSfuQV7EA//AKs/jUKbBxVri+Ep5JkuS7fwDA7L16Vg6RNJJbu8rmRi5yzHJPFFFPoI/9k=", legenda:"rumo ao altar", t:"tile20", bg:"#f7e4f7"}
+  ],
+  // Lista de presentes (valores sugeridos — ajuste à vontade)
+  presentes: [
+    // cat: "guigo" | "chris" | "dois" | "casa" | "lua" — define o filtro onde o presente aparece
+    {nome:"Cesta de doces da Migliore", desc:"Uma cesta de doces da Migliore para adoçar a vida de casados.", valor:160, t:"presentes/migliore", cat:"dois"},
+    {nome:"Créditos na Steam para Guigo comprar um jogo novo", desc:"Para aquele lançamento que ele está esperando há meses.", valor:250, t:"presentes/steam", cat:"guigo"},
+    {nome:"Passagem para a próxima aventura", desc:"Chris já está com o roteiro da próxima viagem na cabeça.", valor:700, t:"presentes/passagem", cat:"chris"},
+    {nome:"Assinatura de IA por um ano", desc:"Para Guigo seguir criando com a ajuda dos robôs.", valor:600, t:"presentes/ia", cat:"guigo"},
+    {nome:"Kit de maquiagem para Chris", desc:"Paletas, batons e pincéis para completar cada look.", valor:250, t:"presentes/maquiagem", cat:"chris"},
+    {nome:"Noite de shawarma", desc:"Um jantar sem cerimônia, do jeitinho que a gente gosta.", valor:130, t:"presentes/shawarma", cat:"dois"},
+    {nome:"Upgrade no setup gamer", desc:"Controle, headset ou aquele periférico que ele namora há tempos.", valor:450, t:"presentes/setup", cat:"guigo"},
+    {nome:"3 meses de academia para Chris", desc:"Para a corredora da casa seguir firme nos treinos.", valor:300, t:"presentes/academia", cat:"chris"},
+    {nome:"Aula de culinária árabe a dois", desc:"Para aprender a fazer em casa as esfihas que a gente ama.", valor:320, t:"presentes/aula", cat:"dois"},
+    {nome:"Amplificador para a guitarra", desc:"Para Guigo tocar mais alto (e os vizinhos que lutem).", valor:380, t:"presentes/amplificador", cat:"guigo"},
+    {nome:"Hospedagem charmosa", desc:"Uma pousada com vista para a nossa lua de mel.", valor:550, t:"presentes/hospedagem", cat:"lua"},
+    {nome:"Look novo para Chris arrasar", desc:"Uma peça nova no guarda-roupa de quem ama montar um look.", valor:350, t:"presentes/look", cat:"chris"},
+    {nome:"Tênis de corrida para Chris", desc:"Para Chris correr atrás do próximo recorde.", valor:500, t:"presentes/tenis", cat:"chris"},
+    {nome:"Noite de jogos a dois", desc:"Um jogo cooperativo novo para as noites em casa.", valor:200, t:"presentes/jogos", cat:"dois"},
+    {nome:"Jogo de panelas", desc:"Para as receitas da nossa casa nova.", valor:480, t:"presentes/panelas", cat:"casa"},
+    {nome:"Kit cafezinho gourmet", desc:"Porque todo dia começa melhor com um café.", valor:120, t:"presentes/cafezinho", cat:"casa"},
+    {nome:"Enxoval de cama", desc:"Lençóis macios para o nosso cantinho.", valor:400, t:"presentes/enxoval", cat:"casa"},
+    {nome:"Micro-ondas", desc:"Para esquentar a comida árabe que sobrar do fim de semana.", valor:600, t:"presentes/microondas", cat:"casa"},
+    {nome:"Ventilador", desc:"Porque o calor de Aracaju não perdoa.", valor:250, t:"presentes/ventilador", cat:"casa"},
+    {nome:"Ferro de passar roupa", desc:"Para os looks de Chris saírem sempre impecáveis.", valor:180, t:"presentes/ferro", cat:"casa"},
+    {nome:"Sanduicheira", desc:"Para os lanchinhos rápidos entre uma partida e outra.", valor:150, t:"presentes/sanduicheira", cat:"casa"},
+    {nome:"Caixinha de som bluetooth", desc:"Para tocar a nossa playlist em qualquer canto da casa.", valor:300, t:"presentes/caixa-som", cat:"casa"},
+    {nome:"Faqueiro Tramontina", desc:"Um jogo de talheres completo para receber a família e os amigos.", valor:350, t:"presentes/faqueiro", cat:"casa"},
+    {nome:"Potes de comida", desc:"Para organizar a cozinha e guardar o que sobrar do almoço.", valor:120, t:"presentes/potes", cat:"casa"},
+    {nome:"Jarra de suco", desc:"Para os sucos geladinhos de fim de semana.", valor:80, t:"presentes/jarra", cat:"casa"},
+    {nome:"Copos e taças", desc:"Para brindar com a família e os amigos em casa.", valor:200, t:"presentes/copos", cat:"casa"},
+    {nome:"Xícaras", desc:"Para o cafezinho de todo dia a dois.", valor:120, t:"presentes/xicaras", cat:"casa"},
+    {nome:"Toalhas", desc:"Toalhas macias para o banheiro da casa nova.", valor:220, t:"presentes/toalhas", cat:"casa"},
+    {nome:"Cabides", desc:"Para pendurar os looks de Chris com todo cuidado.", valor:80, t:"presentes/cabides", cat:"casa"},
+    {nome:"Almofadas", desc:"Para deixar o sofá ainda mais aconchegante.", valor:150, t:"presentes/almofadas", cat:"casa"},
+    {nome:"Abajur", desc:"Uma luz suave para as noites tranquilas em casa.", valor:200, t:"presentes/abajur", cat:"casa"},
+    {nome:"Sapateira", desc:"Para os tênis de corrida e todos os outros pares.", valor:250, t:"presentes/sapateira", cat:"casa"},
+    {nome:"Tapete", desc:"Para deixar a sala mais bonita e quentinha.", valor:350, t:"presentes/tapete", cat:"casa"},
+    {nome:"Cadeira", desc:"Mais um lugar à mesa para receber quem a gente ama.", valor:300, t:"presentes/cadeira", cat:"casa"},
+    {nome:"Alexa", desc:"Para pedir a nossa playlist sem sair do sofá.", valor:400, t:"presentes/alexa", cat:"casa"},
+    {nome:"Sofá", desc:"O cantinho oficial dos filmes e das partidas a dois.", valor:2500, t:"presentes/sofa", cat:"casa"},
+    {nome:"Geladeira", desc:"Para guardar os doces da Migliore e muito mais.", valor:3500, t:"presentes/geladeira", cat:"casa"},
+    {nome:"Fogão", desc:"Para as receitas árabes que vamos aprender juntos.", valor:1500, t:"presentes/fogao", cat:"casa"},
+    {nome:"Ar-condicionado", desc:"Porque o ventilador não vence o verão de Aracaju sozinho.", valor:2200, t:"presentes/ar", cat:"casa"},
+    {nome:"Mesa de jantar", desc:"Para reunir a família e os amigos em volta da comida.", valor:1200, t:"presentes/mesa", cat:"casa"},
+    {nome:"Poltrona", desc:"Um cantinho para ler, jogar e descansar.", valor:900, t:"presentes/poltrona", cat:"casa"},
+    {nome:"Estante de livros", desc:"Para os livros, os jogos e as lembranças do casal.", valor:600, t:"presentes/estante", cat:"casa"},
+    {nome:"Cômoda", desc:"Mais espaço para deixar tudo no lugar.", valor:900, t:"presentes/comoda", cat:"casa"},
+    {nome:"Guarda-roupa", desc:"Espaço de sobra para os looks de Chris e as camisetas de Guigo.", valor:2500, t:"presentes/guarda-roupa", cat:"casa"},
+    {nome:"TV", desc:"Para as maratonas de série e as partidas de videogame.", valor:2800, t:"presentes/tv", cat:"casa"},
+    {nome:"Jantar na lua de mel", desc:"Uma noite especial para brindar a nova fase.", valor:280, t:"presentes/jantar", cat:"lua"},
+    {nome:"Passeio de barco", desc:"Mar, sol e muito amor na lua de mel.", valor:350, t:"presentes/barco", cat:"lua"},
+    {nome:"Day spa a dois", desc:"Massagem e descanso na lua de mel depois de toda a correria do casamento.", valor:450, t:"presentes/spa", cat:"lua"},
+    {nome:"Um mimo de coração", desc:"Escolha você o valor, todo carinho é bem-vindo.", valor:0, t:"presentes/mimo", cat:"todos"}
+  ]
+};
+
+/* ---------- roteamento ---------- */
+const views = ["inicio","presenca","presentes"];
+function route(){
+  let h = (location.hash||"#inicio").slice(1);
+  let v = views.includes(h) ? h : "inicio";
+  document.querySelectorAll(".view").forEach(el=>el.classList.toggle("on", el.id==="v-"+v));
+  document.querySelectorAll(".nav a.link").forEach(a=>a.classList.toggle("on", a.dataset.v===v));
+  window.scrollTo({top:0,behavior:"instant"});
+  setTimeout(observe,30);
+}
+window.addEventListener("hashchange", route);
+function go(id){const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:"smooth"}); return false;}
+
+/* ---------- header ---------- */
+const hdr=document.getElementById("top");
+addEventListener("scroll",()=>hdr.classList.toggle("solid",scrollY>40),{passive:true});
+
+/* ---------- faixas de azulejo ---------- */
+const TILES=["tile6","tile7","tile9","tile10","tile19","tile24","tile20","tile21"];
+document.querySelectorAll(".strip").forEach((s,k)=>{
+  let html=""; for(let i=0;i<26;i++) html+=`<img src="assets/${TILES[(i+k*3)%TILES.length]}.webp" alt="">`;
+  s.innerHTML=html;
+});
+
+/* ---------- contagem ---------- */
+const target=new Date(CONFIG.dataCasamento).getTime();
+const pad=(n,l=2)=>String(n).padStart(l,"0");
+function tick(){
+  let ms=Math.max(0,target-Date.now()), s=Math.floor(ms/1000);
+  document.getElementById("cd-d").textContent=pad(Math.floor(s/86400),3);
+  document.getElementById("cd-h").textContent=pad(Math.floor(s%86400/3600));
+  document.getElementById("cd-m").textContent=pad(Math.floor(s%3600/60));
+  document.getElementById("cd-s").textContent=pad(s%60);
+}
+tick(); setInterval(tick,1000);
+
+/* ---------- links ---------- */
+document.getElementById("spotify").href=CONFIG.spotify;
+document.getElementById("mapa").href=CONFIG.mapa;
+document.getElementById("mapa-recepcao").href=CONFIG.mapaRecepcao;
+
+/* ---------- galeria ---------- */
+const track=document.getElementById("track");
+track.innerHTML=CONFIG.fotos.map((f,i)=>`<figure class="ph"><div class="img ${f.src?"":"empty"}" style="--t:url(assets/${f.t}.webp);--bg:${f.bg};${f.lq?`background:url(${f.lq}) center/cover;`:""}">${f.src?`<img src="${f.src}" alt="${f.legenda}" width="560" height="700" decoding="async" ${i<2?'fetchpriority="high"':""}>`:`<em>Christine & Igor</em>`}</div><figcaption>${f.legenda}</figcaption></figure>`).join("");
+function slide(d){track.scrollBy({left:d*track.clientWidth*.7,behavior:"smooth"});}
+
+/* ---------- presentes ---------- */
+const brl=v=>v.toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0});
+document.getElementById("gifts").innerHTML=CONFIG.presentes.map((g,i)=>`
+  <article class="gift reveal" data-cat="${g.cat||"todos"}"><div class="pic" style="--t:url(assets/${g.t}.webp)"></div>
+  <div class="gb"><h3>${g.nome}</h3><p>${g.desc}</p><div class="price">${g.valor?brl(g.valor):"Valor livre"}</div>
+  <button class="btn ${i%2?"rosa":""}" onclick="openM(${i})">Presentear</button></div></article>`).join("");
+document.getElementById("filtros").addEventListener("click",e=>{
+  const b=e.target.closest(".chip"); if(!b) return;
+  const f=b.dataset.f;
+  document.querySelectorAll("#filtros .chip").forEach(c=>c.classList.toggle("on",c===b));
+  document.querySelectorAll("#gifts .gift").forEach(el=>{const c=el.dataset.cat; el.hidden=!(f==="todos"||c===f||c==="todos"); if(!el.hidden) el.classList.add("in");});
+});
+const modal=document.getElementById("modal");
+function openM(i){
+  const g=CONFIG.presentes[i];
+  document.getElementById("m-pic").style.setProperty("--t",`url(assets/${g.t}.webp)`);
+  document.getElementById("m-t").textContent=g.nome;
+  document.getElementById("m-v").textContent=g.valor?brl(g.valor):"Valor livre";
+  document.getElementById("m-pix").textContent=CONFIG.pix;
+  document.getElementById("m-fav").textContent=CONFIG.favorecido;
+  document.getElementById("copied").textContent="";
+  document.getElementById("m-wa").href=`https://api.whatsapp.com/send?phone=${CONFIG.whatsapp}&text=${encodeURIComponent(`Oi, Chris e Guigo! Acabei de enviar o presente "${g.nome}" pelo site \u{1F49C}`)}`;
+  document.querySelectorAll("#modal [data-nv]").forEach(e=>delete e.dataset.nv); semViuva(modal);
+  modal.classList.add("on");
+}
+function closeM(){modal.classList.remove("on");}
+modal.addEventListener("click",e=>{if(e.target===modal)closeM();});
+addEventListener("keydown",e=>{if(e.key==="Escape")closeM();});
+async function copyPix(){
+  const c=document.getElementById("copied");
+  try{await navigator.clipboard.writeText(CONFIG.pix); c.textContent="Chave copiada! 💜";}
+  catch(_){const r=document.createRange();r.selectNodeContents(document.getElementById("m-pix"));const s=getSelection();s.removeAllRanges();s.addRange(r);c.textContent="Selecionamos a chave — é só copiar.";}
+}
+
+/* ---------- animações de entrada ---------- */
+let io;
+function observe(){
+  if(!("IntersectionObserver" in window)){document.querySelectorAll(".reveal").forEach(e=>e.classList.add("in"));return;}
+  io&&io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}}),{threshold:.12});
+  document.querySelectorAll(".view.on .reveal:not(.in)").forEach(e=>io.observe(e));
+}
+
+/* ---------- sem palavra sozinha na última linha ---------- */
+function semViuva(root){
+  (root||document).querySelectorAll("p,h1,h2,h3,figcaption,.addr span,.bigdate").forEach(el=>{
+    if(el.dataset.nv) return;
+    const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let last=null,n;
+    while((n=w.nextNode())) if(n.nodeValue.trim()) last=n;
+    if(!last) return;
+    const t=last.nodeValue.replace(/\s+$/,""), k=t.lastIndexOf(" ");
+    if(k>0 && t.trim().split(/\s+/).length>1) last.nodeValue=t.slice(0,k)+"\u00A0"+t.slice(k+1)+last.nodeValue.slice(t.length);
+    el.dataset.nv=1;
+  });
+}
+semViuva();
+route();
+</script>
+</body>
+</html>
